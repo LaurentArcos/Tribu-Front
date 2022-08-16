@@ -9,24 +9,47 @@ function NewAccountForm() {
   const {
     register,
     handleSubmit,
-    // formState: { errors },
-  } = useForm();
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      firstName: '',
+      lastName: '',
+      city: '',
+      email: '',
+      avatar: '',
+      description: '',
+      password: '',
+      passwordConfirm: '',
+    },
+  });
+
+  const onSubmit = (data) => console.log(data);
+
+  console.log(errors);
 
   return (
     <form
       className="newaccount"
-      onSubmit={handleSubmit((data) => {
-        console.log(data);
-      })}
+      onSubmit={handleSubmit(onSubmit)}
     >
-      <input {...register('prénom')} type="text" placeholder="Prénom" />
-      <input {...register('nom')} type="text" placeholder="Nom" />
-      <input {...register('ville')} type="text" placeholder="Ville" />
-      <input {...register('email')} type="email" placeholder="Email" />
+      <input
+        {...register('firstName', {
+          required: 'Le prénom est obligatoire',
+          minLength: {
+            value: 3,
+            message: 'Votre prénom doit contenir 3 lettres minimum',
+          },
+        })}
+        type="text"
+        placeholder="Prénom"
+      />
+      <input {...register('lastName', { required: true, minLength: 3 })} type="text" placeholder="Nom" />
+      <input {...register('city', { required: true })} type="text" placeholder="Ville" />
+      <input {...register('email', { required: true })} type="email" placeholder="Email" />
       <input {...register('avatar')} type="text" placeholder="Avatar" />
       <input {...register('description')} type="text" placeholder="Description" />
-      <input {...register('mot de passe')} type="password" placeholder="Mot de passe" />
-      <input {...register('confirmation mot de passe')} type="password" placeholder="Confirmation du mot de passe" />
+      <input {...register('password', { required: true })} type="password" placeholder="Mot de passe" />
+      <input {...register('passwordConfirm', { required: true })} type="password" placeholder="Confirmation du mot de passe" />
       <input type="submit" />
     </form>
   );
