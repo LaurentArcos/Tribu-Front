@@ -19,14 +19,14 @@ function NewAccountForm() {
         console.log(data);
       })}
     >
-      <input type="text" {...register('prénom')} />
-      <input type="text" {...register('nom')} />
-      <input type="text" {...register('ville')} />
-      <input type="email" {...register('email')} />
-      <input type="text" {...register('avatar')} />
-      <input type="text" {...register('description')} />
-      <input type="password" {...register('mot de passe')} />
-      <input type="password" {...register('confirmation mot de passe')} />
+      <input {...register('prénom')} type="text" placeholder="Prénom" />
+      <input {...register('nom')} type="text" placeholder="Nom" />
+      <input {...register('ville')} type="text" placeholder="Ville" />
+      <input {...register('email')} type="email" placeholder="Email" />
+      <input {...register('avatar')} type="text" placeholder="Avatar" />
+      <input {...register('description')} type="text" placeholder="Description" />
+      <input {...register('mot de passe')} type="password" placeholder="Mot de passe" />
+      <input {...register('confirmation mot de passe')} type="password" placeholder="Confirmation du mot de passe" />
       <input type="submit" />
     </form>
   );
