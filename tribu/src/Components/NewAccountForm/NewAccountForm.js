@@ -11,6 +11,7 @@ function NewAccountForm() {
     handleSubmit,
     formState: { errors },
   } = useForm({
+    mode: 'onBlur',
     defaultValues: {
       firstName: '',
       lastName: '',
