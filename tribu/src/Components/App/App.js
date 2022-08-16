@@ -1,11 +1,14 @@
 import React from 'react';
-import Header from '../Header/Header';
+
 import '../../styles/styles.scss';
+import Header from '../Header/Header';
+import NewAccountForm from '../NewAccountForm/NewAccountForm';
 
 function App() {
   return (
     <div className="App">
       <Header />
+      <NewAccountForm />
     </div>
   );
 }
