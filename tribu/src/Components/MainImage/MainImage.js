@@ -9,7 +9,7 @@ function MainImage() {
     <div className="MainImage">
       <img src={img} className="MainImage-img" alt="Rome" />
       <div className="MainImage-content">
-        <h2 className="MainImage-title">ROME</h2>
+        <h2 className="MainImage-title">rome</h2>
       </div>
     </div>
   );
