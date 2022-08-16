@@ -43,6 +43,7 @@ function NewAccountForm() {
         type="text"
         placeholder="Prénom"
       />
+      <p>{errors.firstName?.message}</p>
       <input {...register('lastName', { required: true, minLength: 3 })} type="text" placeholder="Nom" />
       <input {...register('city', { required: true })} type="text" placeholder="Ville" />
       <input {...register('email', { required: true })} type="email" placeholder="Email" />
