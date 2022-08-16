@@ -95,7 +95,7 @@ function NewAccountForm() {
         accept="image/png, image/jpeg"
       />
 
-      <input type="submit" />
+      <input className="new-account_button" type="submit" />
     </form>
   );
 }
