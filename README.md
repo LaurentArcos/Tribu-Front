@@ -18,3 +18,21 @@ Démarrez votre nouvelle vie !
 - [Svitlana Burlak](https://github.com/svitlanaburlak)
 - [Marilyne Druart](https://github.com/MarilyneDruart)
 - [Pierre-Henri Kocan](https://github.com/Pierre-Henri-Kocan)
+
+# Installation
+
+In the project directory named tribu, you can run :
+
+- npm : ```npm install```
+
+
+- React : ```npm install react```
+- Redux : ```npm install redux```
+- React-Redux : ```npm install react-redux```
+- React-router-dom : ```npm install react-router-dom```
+- Axios : ```npm install axios```
+- React-Hook-Form : ```npm install react-hook-form```
+- Yup : ```npm install yup```
+- PropTypes : ```npm install proptypes```
+- SASS : ```npm install sass```
+- React-hot-toast : ```npm install react-hot-toast```
