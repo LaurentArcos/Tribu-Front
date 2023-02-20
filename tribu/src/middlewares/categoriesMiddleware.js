@@ -8,7 +8,7 @@ const categoriesMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case FETCH_CATEGORIES:
       axios
-        .get('https://pierre-henri-kocan-server.eddi.cloud/projet-reseau-social-back/public/api/categories')
+        .get('https://www.demo-tribu.tech/api/categories')
         .then((response) => {
           store.dispatch(setCategoriesList(response.data));
         })
