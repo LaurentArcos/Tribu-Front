@@ -11,7 +11,7 @@ const usersMiddleware = (store) => (next) => (action) => {
     case FETCH_USER:
       axios.defaults.headers.common.Authorization = `bearer ${token}`;
       axios
-        .get('https://pierre-henri-kocan-server.eddi.cloud/projet-reseau-social-back/public/api/users/')
+        .get('https://www.demo-tribu.tech/api/users/')
         .then((response) => {
           store.dispatch(setUser(
             response.data.id,
