@@ -49,7 +49,7 @@ function LoginForm() {
 
   const onSubmit = (data) => {
     axios
-      .post('https://pierre-henri-kocan-server.eddi.cloud/projet-reseau-social-back/public/api/login_check', data, {
+      .post('https://www.demo-tribu.tech/api/login_check', data, {
         headers: {
           'Content-Type': 'application/json',
         },
